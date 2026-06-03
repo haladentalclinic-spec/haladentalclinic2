@@ -1,0 +1,6 @@
+{
+  "name": "Hala Dental Portal",
+  "description": "A premium native dental clinic ecosystem and patient management gateway powered by Supabase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
