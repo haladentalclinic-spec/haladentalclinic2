@@ -16,10 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'zulu'
           cache: 'gradle'
 
@@ -29,8 +29,17 @@ jobs:
       - name: Restore debug.keystore if base64 placeholder exists
         run: |
           if [ -f debug.keystore.base64 ]; then
-            echo "Decoding debug.keystore.base64 to recreate debug.keystore..."
-            base64 -d debug.keystore.base64 > debug.keystore
+            echo "Decoding debug.keystore.base64 to recreate debug.keystore using python..."
+            python3 -c "
+          import base64
+          try:
+              data = open('debug.keystore.base64', 'rb').read().replace(b'\r', b'').replace(b'\n', b'').strip()
+              decoded = base64.b64decode(data)
+              open('debug.keystore', 'wb').write(decoded)
+              print('Successfully decoded and created debug.keystore of size:', len(decoded))
+          except Exception as e:
+              print('Warning or Error decoding keystore base64:', e)
+            "
           else
             echo "No debug.keystore.base64 found. Will fall back to standard gradle debug signing."
           fi

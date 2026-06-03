@@ -47,8 +47,6 @@ android {
       val customKeystore = file("${rootDir}/debug.keystore")
       if (customKeystore.exists()) {
         signingConfig = signingConfigs.getByName("debugConfig")
-      } else {
-        signingConfig = signingConfigs.getByName("debug")
       }
     }
   }
