@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp"
+    android:height="140dp"
+    android:viewportWidth="280"
+    android:viewportHeight="140">
+    <!-- Background Gradient -->
+    <path
+        android:pathData="M0,0h280v140h-280z"
+        android:fillColor="#041E49" />
+    
+    <!-- Abstract Tech Lines / Dental Anatomy curves -->
+    <path
+        android:pathData="M-20,160 Q60,60 140,110 T300,40"
+        android:strokeWidth="2"
+        android:strokeColor="#1aFFFFFF"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M-10,170 Q80,80 160,130 T310,60"
+        android:strokeWidth="1"
+        android:strokeColor="#0D7E8E"
+        android:fillColor="#00000000" />
+
+    <!-- Stylized Tooth Outline in Background -->
+    <path
+        android:pathData="M210,50 C205,35 185,38 180,45 C175,38 155,35 150,50 C145,65 148,95 160,105 C165,110 170,105 175,100 C178,98 182,98 185,100 C190,105 195,110 200,105 C212,95 215,65 210,50 Z"
+        android:strokeWidth="3.5"
+        android:strokeColor="#D3E3FD"
+        android:fillColor="#0c2e61" />
+
+    <!-- Sparkle Stars -->
+    <path
+        android:pathData="M230,35 L232,39 L236,40 L232,41 L230,45 L228,41 L224,40 L228,39 Z"
+        android:fillColor="#FFA000" />
+    <path
+        android:pathData="M140,45 L141.5,48 L145,49 L141.5,50 L140,53 L138.5,50 L135,49 L138.5,48 Z"
+        android:fillColor="#FFA000" />
+    <path
+        android:pathData="M165,115 L166,117.5 L169,118 L166,118.5 L165,121 L164,118.5 L161,118 L164,117.5 Z"
+        android:fillColor="#D3E3FD" />
+
+    <!-- Text branding labels in vector -->
+    <path
+        android:pathData="M25,45 L25,35 M20,35 L30,35 M20,45 L30,45 M35,45 L35,35 M32,40 L38,40 M42,45 L42,35 M45,45 L45,35"
+        android:strokeWidth="1.5"
+        android:strokeColor="#FFFFFF" />
+</vector>

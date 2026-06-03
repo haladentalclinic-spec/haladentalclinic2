@@ -34,6 +34,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
+import androidx.compose.ui.res.painterResource
+import com.example.R
 import com.example.data.model.Reminder
 import com.example.data.model.UserData
 import com.example.data.model.Work
@@ -1073,12 +1075,19 @@ fun BannerCard(title: String, imageUrl: String?, linkUrl: String) {
                         )
                 )
             } else {
+                androidx.compose.foundation.Image(
+                    painter = painterResource(id = R.drawable.ic_dental_banner),
+                    contentDescription = title,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize()
+                )
+                // Overlay clean dim gradient over fallback banner as well for legible text
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
                         .background(
                             Brush.verticalGradient(
-                                colors = listOf(ClinicalTealLight, ClinicalTeal)
+                                colors = listOf(Color.Transparent, Color.Black.copy(alpha = 0.65f))
                             )
                         )
                 )

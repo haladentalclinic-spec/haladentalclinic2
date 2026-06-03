@@ -1,30 +1,33 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aapt="http://schemas.android.com/aapt"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <path android:pathData="M31,63.928c0,0 6.4,-11 12.1,-13.1c7.2,-2.6 26,-1.4 26,-1.4l38.1,38.1L107,108.928l-32,-1L31,63.928z">
-        <aapt:attr name="android:fillColor">
-            <gradient
-                android:endX="85.84757"
-                android:endY="92.4963"
-                android:startX="42.9492"
-                android:startY="49.59793"
-                android:type="linear">
-                <item
-                    android:color="#44000000"
-                    android:offset="0.0" />
-                <item
-                    android:color="#00000000"
-                    android:offset="1.0" />
-            </gradient>
-        </aapt:attr>
-    </path>
+    
+    <!-- Central Tooth Graphic (carefully bounds restricted to active center 66dp x 66dp) -->
+    <!-- Centered at X=54, Y=54 -->
     <path
         android:fillColor="#FFFFFF"
-        android:fillType="nonZero"
-        android:pathData="M65.3,45.828l3.8,-6.6c0.2,-0.4 0.1,-0.9 -0.3,-1.1c-0.4,-0.2 -0.9,-0.1 -1.1,0.3l-3.9,6.7c-6.3,-2.8 -13.4,-2.8 -19.7,0l-3.9,-6.7c-0.2,-0.4 -0.7,-0.5 -1.1,-0.3C38.8,38.328 38.7,38.828 38.9,39.228l3.8,6.6C36.2,49.428 31.7,56.028 31,63.928h46C76.3,56.028 71.8,49.428 65.3,45.828zM43.4,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2c-0.3,-0.7 -0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C45.3,56.528 44.5,57.328 43.4,57.328L43.4,57.328zM64.6,57.328c-0.8,0 -1.5,-0.5 -1.8,-1.2s-0.1,-1.5 0.4,-2.1c0.5,-0.5 1.4,-0.7 2.1,-0.4c0.7,0.3 1.2,1 1.2,1.8C66.5,56.528 65.6,57.328 64.6,57.328L64.6,57.328z"
-        android:strokeWidth="1"
-        android:strokeColor="#00000000" />
+        android:pathData="M54,32 C49,20 33,22 30,32 C26,46 29,66 38,76 C41,79 45,76 48,72 C50,70 52,70 54,72 C57,76 61,79 64,76 C73,66 76,46 72,32 C69,22 53,20 54,32 Z" />
+
+    <!-- Cyan/Blue Core Gradient Accent Inside the Tooth -->
+    <path
+        android:fillColor="#0D7E8E"
+        android:pathData="M54,36 C51,26 40,28 38,36 C35,46 37,60 44,68 C46,70 48,68 50,65 C52,63 52.8,63 54,65 C55.2,63 56,63 58,65 C60,68 62,70 64,68 C71,60 73,46 70,36 C68,28 57,26 54,36 Z"
+        android:fillAlpha="0.8" />
+
+    <!-- Elegant White Micro Medical Plus cross inside the tooth core -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M51,48 h6 v4 h-6 z M53,46 h2 v8 h-2 z" />
+
+    <!-- Sparkle star at top right index -->
+    <path
+        android:fillColor="#FFA000"
+        android:pathData="M72,25 L73.5,28 L76.5,29 L73.5,30 L72,33 L70.5,30 L67.5,29 L70.5,28 Z" />
+        
+    <!-- Sparkle star at bottom left index -->
+    <path
+        android:fillColor="#FFF"
+        android:pathData="M32,68 L33,70 L35,70.5 L33,71 L32,73 L31,71 L29,70.5 L31,70 Z" />
 </vector>
